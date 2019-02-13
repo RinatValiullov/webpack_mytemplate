@@ -6,8 +6,8 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, './dist'),
-        publicPath: './dist'
+        path: path.resolve(__dirname, '../dist'),
+        publicPath: '/dist'
     },
     devServer: {
         overlay: {
