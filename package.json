@@ -1,0 +1,33 @@
+{
+    "name": "webpack_mytemplate",
+    "version": "1.0.0",
+    "description": "my custom webpack template",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack-dev-server --open --mode development",
+        "build": "webpack --mode production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RinatValiullov/webpack_mytemplate.git"
+    },
+    "keywords": [
+        "webpack",
+        "template",
+        "javascript",
+        "js",
+        "custom_template"
+    ],
+    "author": "4rontender",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/RinatValiullov/webpack_mytemplate/issues"
+    },
+    "homepage": "https://github.com/RinatValiullov/webpack_mytemplate#readme",
+    "devDependencies": {
+        "path": "^0.12.7",
+        "webpack": "^4.29.3",
+        "webpack-cli": "^3.2.3",
+        "webpack-dev-server": "^3.1.14"
+    }
+}
