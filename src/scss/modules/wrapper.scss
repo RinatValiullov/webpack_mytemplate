@@ -1,0 +1,13 @@
+.wrapper_example {
+    display: flex;
+
+    h1 {
+        font-size: rem(20);
+        margin-bottom: 20px;
+    }
+}
+
+#main {
+    background-image: url('/assets/img/dogsad.jpg');
+    width: 100%;
+}
