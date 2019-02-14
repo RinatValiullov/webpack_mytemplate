@@ -1,5 +1,17 @@
-/* Custom styles */
+/*! Custom styles */
 
 h1 {
     color: #359;
+    padding-left: 30px;
+    position: relative;
+    /* pseudo-element styles */
+    &::after {
+        content: "\2713";
+        color: lighten(#359, 30%);
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+    }
 }
