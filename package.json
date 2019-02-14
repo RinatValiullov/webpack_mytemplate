@@ -9,10 +9,7 @@
     },
     "browserslist": [
         "last 3 versions",
-        "> 1%",
-        "maintained node versions",
-        "not dead",
-        "not ie <= 10"
+        "> 1%"
     ],
     "repository": {
         "type": "git",

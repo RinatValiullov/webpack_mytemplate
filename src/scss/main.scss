@@ -1,7 +1,13 @@
-/*! Custom styles */
+/* ! Custom styles */
+
+body {
+    display: flex;
+    align-items: center;
+}
 
 h1 {
     color: #359;
+    margin: auto;
     padding-left: 30px;
     position: relative;
     /* pseudo-element styles */
