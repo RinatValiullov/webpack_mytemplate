@@ -13,7 +13,8 @@ module.exports = {
         overlay: {
             warnings: true,
             errors: true
-        }
+        },
+        port: 4327
     },
     module: {
         rules: [{
