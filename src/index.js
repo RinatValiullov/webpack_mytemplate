@@ -6,4 +6,4 @@ import './js/check';
 // import 'vue';
 // import Vue from 'vue';
 
-// window.Vue = require('vue');
+window.Vue = require('vue');
