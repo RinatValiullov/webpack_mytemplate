@@ -1,5 +1,7 @@
 let path = require('path');
 let MiniCssExtractPlugin = require('mini-css-extract-plugin');
+let CopyWebpackPlugin = require('copy-webpack-plugin');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let PATHS = {
     src: path.join(__dirname, './src'),
@@ -24,6 +26,13 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: '/node_modules/'
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]'
+                }
             },
             {
                 test: /\.scss$/,
@@ -80,6 +89,20 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: `${PATHS.assets}css/[name].css`
-        })
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/index.html`,
+            filename: './index.html'
+        }),
+        new CopyWebpackPlugin([{
+                from: `${PATHS.src}/img`,
+                to: `${PATHS.assets}img`
+            },
+            {
+                from: `${PATHS.src}/static`,
+                to: ''
+            },
+        ])
     ]
 }
