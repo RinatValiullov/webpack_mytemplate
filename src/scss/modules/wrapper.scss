@@ -2,12 +2,15 @@
     display: flex;
 
     h1 {
-        font-size: rem(20);
+        font-size: rem(32);
         margin-bottom: 20px;
     }
 }
 
 #main {
-    background-image: url('/assets/img/dogsad.jpg');
-    width: 100%;
+    background: rgb(125, 146, 167);
+    // background-image: url('/assets/img/dog.jpg');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
 }
