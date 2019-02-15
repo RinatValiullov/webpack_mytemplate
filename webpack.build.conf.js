@@ -6,6 +6,6 @@ let buildWebpackConfig = merge(baseWebpackConfig, {
     plugins: []
 });
 
-module.export = new Promise((resolve, reject) => {
+module.exports = new Promise((resolve, reject) => {
     resolve(buildWebpackConfig);
 });

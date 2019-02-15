@@ -1,22 +1,23 @@
 let path = require('path');
 let MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+let PATHS = {
+    src: path.join(__dirname, './src'),
+    dist: path.join(__dirname, './dist'),
+    assets: 'assets/'
+}
 
 module.exports = {
+    externals: {
+        paths: PATHS
+    },
     entry: {
-        app: './src/index.js'
+        app: PATHS.src
     },
     output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist'
-    },
-    devServer: {
-        overlay: {
-            warnings: true,
-            errors: true
-        },
-        port: 4327
+        filename: `${PATHS.assets}js/[name].js`,
+        path: PATHS.dist,
+        publicPath: '/'
     },
     module: {
         rules: [{
@@ -40,7 +41,7 @@ module.exports = {
                         options: {
                             sourceMap: true,
                             config: {
-                                path: 'src/js/postcss.config.js'
+                                path: `${PATHS.src}/js/postcss.config.js`
                             }
                         }
                     },
@@ -78,7 +79,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name].css"
+            filename: `${PATHS.assets}css/[name].css`
         })
     ]
 }
